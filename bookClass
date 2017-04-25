@@ -1,0 +1,52 @@
+public class Book {
+
+    private String title;
+    private String author;
+    private int publishYear;
+
+//default constructor with no arguments
+public Book() {
+    title = " The Alchemist";
+    author = "Paulo Cohelo";
+    publishYear = 1990;
+}
+
+//2nd constructor with all given arguments
+public Book(String title, String author, int publishYear) {
+    this.title = title;
+    this.author = author;
+    this.publishYear = publishYear;
+}
+
+public String getTitle() {
+    return title;
+}
+
+public String getAuthor(){
+    return author;
+}
+
+public int getPublishYear(){
+    return publishYear;
+}
+
+public void setTitle(String title){
+    this.title = title;
+}
+
+public void setAuthor(String author){
+    this.author = author;
+}
+
+public void setPublishYear(int publishYear){
+    this.publishYear = publishYear;
+}
+
+public String toString() {
+    String str = "";
+    return str + " Title is " + title + ", the Author is " + author + "and the publish year is " + publishYear + ".";
+}
+
+
+
+}

@@ -1,0 +1,28 @@
+public static void main(String[] args) {
+        ArrayList<Book>bookList = new ArrayList<>();
+        Book newBook = new Book("Dom", 2017, true);
+        System.out.println(bookList);
+        Book newBook2 = new Book("AA", 2016, false);
+        Book newBook3 = new Book("Dominique", 2008, true);
+
+        bookList.add(newBook);
+        bookList.add(newBook2);
+        bookList.add(newBook3);
+
+        System.out.println(bookList);
+        findPubDate(bookList);
+
+
+    }
+
+    public static void findPubDate(ArrayList<Book> bookList) {
+        int pubDate = Integer.MIN_VALUE;
+
+        for(int i = 0; i < bookList.size(); i++){
+            if(bookList.get(i).getPubDate() > pubDate){
+                pubDate = bookList.get(i).getPubDate();
+            }
+        }
+        System.out.println(pubDate);
+    }
+}

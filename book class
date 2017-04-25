@@ -1,0 +1,56 @@
+public class Book {
+
+    private String title;
+    private int pubDate;
+    private boolean isCheckedOut;
+    private ArrayList<Book> bookList = new ArrayList<>();
+
+//default constructor with no arguments
+    public Book() {
+        title = " The Alchemist";
+        pubDate = 1990;
+        isCheckedOut = false;
+    }
+
+//2nd constructor with all given arguments
+    public Book(String title, int pubDate, boolean isCheckedOut) {
+        this.title = title;
+        this.pubDate = pubDate;
+        this.isCheckedOut = isCheckedOut;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public boolean getIsCheckedOut() {
+        return isCheckedOut;
+    }
+
+    public int getPubDate() {
+        return pubDate;
+    }
+
+    public ArrayList<Book> getBookList() {
+        return bookList;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setIsCheckedOut(boolean isCheckedOut) {
+        this.isCheckedOut = isCheckedOut;
+    }
+
+    public void setPubDate(int pubDate) {
+        this.pubDate = pubDate;
+    }
+
+    @Override
+    public String toString() {
+
+        return "Title: " + title + " Publish Date: " + pubDate + " Checked Out: "
+                + isCheckedOut;
+    }  
+}
